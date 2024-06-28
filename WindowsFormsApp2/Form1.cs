@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp2
@@ -8,7 +9,7 @@ namespace WindowsFormsApp2
     {
         public Form1()
         {
-            InitializeComponent();
+            InitializeComponent();       
         }
 
 
@@ -18,24 +19,42 @@ namespace WindowsFormsApp2
             Close();
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void Form_Load(object sender, EventArgs e)
         {
+            // Yuvarlak köşeler için bir GraphicsPath oluşturun
+            GraphicsPath path = new GraphicsPath();
+            int radius = 30; // Köşe yarıçapı
+            int diameter = radius * 2;
+            Size size = new Size(diameter, diameter);
 
-        }
-        private void Form1_load(object sender, EventArgs e)
-        {
-            System.Drawing.Drawing2D.GraphicsPath path = new System.Drawing.Drawing2D.GraphicsPath();
-            int radius = 30; // Adjust the value to change the roundness of the corners
-                             // Create a rounded rectangle path using the form's size and radius
-            path.AddArc(0, 0, radius, radius, 180, 90); // Top-left corner
-            path.AddArc(this.Width - radius, 0, radius, radius, 270, 90); // Top-right corner
-            path.AddArc(this.Width - radius, this.Height - radius, radius, radius, 0, 90); // Bottom-right corner
-            path.AddArc(0, this.Height - radius, radius, radius, 90, 90); // Bottom-left corner I
-            // Create a region with the rounded rectangle path and apply it to the form
+            // Sol üst köşe
+            path.AddArc(new Rectangle(Point.Empty, size), 180, 90);
+            // Sağ üst köşe
+            path.AddArc(new Rectangle(new Point(this.Width - diameter, 0), size), 270, 90);
+            // Sağ alt köşe
+            path.AddArc(new Rectangle(new Point(this.Width - diameter, this.Height - diameter), size), 0, 90);
+            // Sol alt köşe
+            path.AddArc(new Rectangle(new Point(0, this.Height - diameter), size), 90, 90);
+
+            // Kapalı bir yol oluşturmak için çizgiyi ekleyin
+            path.CloseFigure();
             this.Region = new Region(path);
+
+            // Çizim için Paint olayını ele alın
+            this.Paint += new PaintEventHandler(this.Form_Paint);
         }
 
-        private void btn_login_Click(object sender, EventArgs e)
+        private void Form_Paint(object sender, PaintEventArgs e)
+        {
+            // Sınırı çiz
+            int borderWidth = 0;
+            Color borderColor = Color.Black;
+            using (Pen pen = new Pen(borderColor, borderWidth))
+            {
+                e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
+            }
+        }
+        public void btn_login_Click(object sender, EventArgs e)
         {
             string username = txt_username.Text;
             string password = txt_password.Text;
@@ -49,6 +68,9 @@ namespace WindowsFormsApp2
                 if (txt_username.Text == "Ege" && txt_password.Text == "ege200842")
                 {
                     MessageBox.Show($"Hoşgeldiniz {username} bey sisteme başarıyla giriş yaptınız");
+                    form2 form2 = new form2();
+                    form2.Show();
+                    this.Hide();
                 }
                 else 
                 {
@@ -57,8 +79,9 @@ namespace WindowsFormsApp2
             }
         }
 
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-
+            txt_password.PasswordChar = Cb_Created.Checked ? '\0' : '*';
         }
     }
 }

@@ -44,6 +44,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txt_password = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.Cb_Created = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -59,16 +60,17 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1053, 30);
+            this.panel1.Size = new System.Drawing.Size(1158, 30);
             this.panel1.TabIndex = 0;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(12, 8);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 15);
+            this.label2.Size = new System.Drawing.Size(101, 15);
             this.label2.TabIndex = 3;
             this.label2.Text = "Hebebiy/Katyusa";
             // 
@@ -80,7 +82,7 @@
             this.button1.Dock = System.Windows.Forms.DockStyle.Right;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(1023, 0);
+            this.button1.Location = new System.Drawing.Point(1128, 0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(30, 30);
             this.button1.TabIndex = 1;
@@ -90,10 +92,11 @@
             // btn_login
             // 
             this.btn_login.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btn_login.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btn_login.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btn_login.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_login.ForeColor = System.Drawing.Color.White;
-            this.btn_login.Location = new System.Drawing.Point(86, 218);
+            this.btn_login.Location = new System.Drawing.Point(93, 251);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(178, 40);
             this.btn_login.TabIndex = 2;
@@ -113,7 +116,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(153, 45);
+            this.label1.Location = new System.Drawing.Point(163, 45);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(48, 20);
             this.label1.TabIndex = 3;
@@ -123,6 +126,7 @@
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.Cb_Created);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.linkLabel2);
@@ -134,9 +138,9 @@
             this.panel2.Controls.Add(this.txt_password);
             this.panel2.Controls.Add(this.txt_username);
             this.panel2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.panel2.Location = new System.Drawing.Point(29, 140);
+            this.panel2.Location = new System.Drawing.Point(29, 167);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(410, 372);
+            this.panel2.Size = new System.Drawing.Size(376, 372);
             this.panel2.TabIndex = 4;
             // 
             // pictureBox2
@@ -165,7 +169,7 @@
             this.linkLabel2.DisabledLinkColor = System.Drawing.Color.White;
             this.linkLabel2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.linkLabel2.LinkColor = System.Drawing.SystemColors.ButtonFace;
-            this.linkLabel2.Location = new System.Drawing.Point(114, 271);
+            this.linkLabel2.Location = new System.Drawing.Point(125, 309);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(116, 15);
             this.linkLabel2.TabIndex = 4;
@@ -178,7 +182,7 @@
             this.linkLabel1.DisabledLinkColor = System.Drawing.SystemColors.ButtonFace;
             this.linkLabel1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.linkLabel1.LinkColor = System.Drawing.SystemColors.ButtonFace;
-            this.linkLabel1.Location = new System.Drawing.Point(125, 191);
+            this.linkLabel1.Location = new System.Drawing.Point(134, 217);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(95, 15);
             this.linkLabel1.TabIndex = 4;
@@ -194,7 +198,6 @@
             this.label4.Size = new System.Drawing.Size(30, 15);
             this.label4.TabIndex = 3;
             this.label4.Text = "Şifre";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -219,11 +222,26 @@
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(0, 0);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(1053, 624);
+            this.pictureBox3.Size = new System.Drawing.Size(1158, 679);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 5;
             this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // Cb_Created
+            // 
+            this.Cb_Created.AllowDrop = true;
+            this.Cb_Created.AutoSize = true;
+            this.Cb_Created.BackColor = System.Drawing.Color.Transparent;
+            this.Cb_Created.Checked = true;
+            this.Cb_Created.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.Cb_Created.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Cb_Created.Location = new System.Drawing.Point(119, 193);
+            this.Cb_Created.Name = "Cb_Created";
+            this.Cb_Created.Size = new System.Drawing.Size(122, 21);
+            this.Cb_Created.TabIndex = 6;
+            this.Cb_Created.Text = "Show Password";
+            this.Cb_Created.UseVisualStyleBackColor = false;
+            this.Cb_Created.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // Form1
             // 
@@ -231,7 +249,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(1053, 624);
+            this.ClientSize = new System.Drawing.Size(1158, 679);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox3);
@@ -270,6 +288,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.CheckBox Cb_Created;
     }
 }
 
