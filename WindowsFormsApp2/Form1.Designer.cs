@@ -229,7 +229,6 @@
             // 
             // Cb_Created
             // 
-            this.Cb_Created.AllowDrop = true;
             this.Cb_Created.AutoSize = true;
             this.Cb_Created.BackColor = System.Drawing.Color.Transparent;
             this.Cb_Created.Checked = true;
