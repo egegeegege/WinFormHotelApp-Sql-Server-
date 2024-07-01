@@ -73,6 +73,26 @@ namespace WindowsFormsApp2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dsa {
+            get {
+                object obj = ResourceManager.GetObject("dsa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fdg {
+            get {
+                object obj = ResourceManager.GetObject("fdg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap padlock {
             get {
                 object obj = ResourceManager.GetObject("padlock", resourceCulture);
@@ -86,6 +106,56 @@ namespace WindowsFormsApp2.Properties {
         internal static System.Drawing.Bitmap pngwing_com {
             get {
                 object obj = ResourceManager.GetObject("pngwing.com", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngwing_com__2_ {
+            get {
+                object obj = ResourceManager.GetObject("pngwing.com (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngwing_com__3_ {
+            get {
+                object obj = ResourceManager.GetObject("pngwing.com (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngwing_com__4_ {
+            get {
+                object obj = ResourceManager.GetObject("pngwing.com (4)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngwing_com__5_ {
+            get {
+                object obj = ResourceManager.GetObject("pngwing.com (5)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngwing_com__6_ {
+            get {
+                object obj = ResourceManager.GetObject("pngwing.com (6)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
