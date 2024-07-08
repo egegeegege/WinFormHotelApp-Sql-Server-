@@ -97,11 +97,23 @@
     <Compile Include="frmKayıtOl.Designer.cs">
       <DependentUpon>frmKayıtOl.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmOtelDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOtelDetay.Designer.cs">
+      <DependentUpon>frmOtelDetay.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmOtelEkle.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmOtelEkle.Designer.cs">
       <DependentUpon>frmOtelEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOtelListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOtelListesi.Designer.cs">
+      <DependentUpon>frmOtelListesi.cs</DependentUpon>
     </Compile>
     <Compile Include="frmYoneticiPanel.cs">
       <SubType>Form</SubType>
@@ -127,8 +139,14 @@
     <EmbeddedResource Include="frmKayıtOl.resx">
       <DependentUpon>frmKayıtOl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmOtelDetay.resx">
+      <DependentUpon>frmOtelDetay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmOtelEkle.resx">
       <DependentUpon>frmOtelEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOtelListesi.resx">
+      <DependentUpon>frmOtelListesi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmYoneticiPanel.resx">
       <DependentUpon>frmYoneticiPanel.cs</DependentUpon>

@@ -39,5 +39,11 @@ namespace WindowsFormsApp2
             frmOtelEkle frmOtelEkle = new frmOtelEkle();
             frmOtelEkle.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            frmOtelListesi frmOtelListesi = new frmOtelListesi();
+            frmOtelListesi.Show();
+        }
     }
 }

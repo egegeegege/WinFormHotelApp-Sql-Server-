@@ -207,6 +207,7 @@
             this.btn_ekle.TabIndex = 3;
             this.btn_ekle.Text = "Ekle";
             this.btn_ekle.UseVisualStyleBackColor = false;
+            this.btn_ekle.Click += new System.EventHandler(this.btn_ekle_Click);
             // 
             // panel1
             // 
