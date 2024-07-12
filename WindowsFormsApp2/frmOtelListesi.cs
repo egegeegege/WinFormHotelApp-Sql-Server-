@@ -62,5 +62,10 @@ namespace WindowsFormsApp2
             frmOtelDetay.base64Image = ImageBase64;
             frmOtelDetay.Show();
         }
+
+        private void dgv_OtelerListesi_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

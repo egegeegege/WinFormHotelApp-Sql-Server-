@@ -15,9 +15,9 @@ namespace WindowsFormsApp2
 {
     public partial class frmOtelDetay : Form
     {
-        internal string kid;
-        internal string base64Image;
-        internal int id;
+        public string kid;
+        public int id;
+        public string base64Image;
         public int gun;
 
         ProjectContext db = new ProjectContext();
@@ -110,7 +110,7 @@ namespace WindowsFormsApp2
             else
             {
                 lbl_gunsayisi.Text = gun.ToString();
-                int faturatutari = gun * Convert.ToInt32(lbl_faturatutar.Text);
+                int faturatutari = gun * Convert.ToInt32(lbl_GünlükFiyatı.Text);
                 lbl_faturatutar.Text = faturatutari.ToString();
             }
         }

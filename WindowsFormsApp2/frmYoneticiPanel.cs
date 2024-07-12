@@ -12,6 +12,8 @@ namespace WindowsFormsApp2
 {
     public partial class frmYoneticiPanel : Form
     {
+        internal string kid;
+
         public frmYoneticiPanel()
         {
             InitializeComponent();

@@ -48,6 +48,7 @@ namespace WindowsFormsApp2
                 {
                     MessageBox.Show($"Hoşgeldin {ad}");
                     frmYoneticiPanel frmYoneticiPanel = new frmYoneticiPanel();
+                    frmYoneticiPanel.kid = id.ToString();
                     frmYoneticiPanel.Show();
                     this.Hide();
                 }

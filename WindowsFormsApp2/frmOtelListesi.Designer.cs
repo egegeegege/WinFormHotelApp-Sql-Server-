@@ -50,6 +50,7 @@
             this.dgv_OtelerListesi.Name = "dgv_OtelerListesi";
             this.dgv_OtelerListesi.Size = new System.Drawing.Size(745, 399);
             this.dgv_OtelerListesi.TabIndex = 1;
+            this.dgv_OtelerListesi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_OtelerListesi_CellContentClick);
             this.dgv_OtelerListesi.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_OtelerListesi_CellMouseClick);
             // 
             // frmOtelListesi

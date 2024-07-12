@@ -261,7 +261,7 @@
             this.lbl_gunsayisi.BackColor = System.Drawing.SystemColors.Control;
             this.lbl_gunsayisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lbl_gunsayisi.ForeColor = System.Drawing.Color.Black;
-            this.lbl_gunsayisi.Location = new System.Drawing.Point(922, 390);
+            this.lbl_gunsayisi.Location = new System.Drawing.Point(922, 391);
             this.lbl_gunsayisi.Name = "lbl_gunsayisi";
             this.lbl_gunsayisi.Size = new System.Drawing.Size(0, 15);
             this.lbl_gunsayisi.TabIndex = 17;
