@@ -12,7 +12,7 @@ namespace WindowsFormsApp2.ORM.Context
     {
         public ProjectContext()
         {
-            Database.Connection.ConnectionString = "Server=.;Database=ALog;uid=sa;pwd=1453";
+            Database.Connection.ConnectionString = "Server=DESKTOP-L027AII\\SQLEXPRESS;Database=ALog;uid=sa;pwd=1453";
         }
         public DbSet<Oteller> Otellers { get; set; }
         public DbSet<Yoneticiler> Yoneticilers { get; set; }

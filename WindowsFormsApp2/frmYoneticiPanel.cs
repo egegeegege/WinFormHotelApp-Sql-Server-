@@ -47,5 +47,10 @@ namespace WindowsFormsApp2
             frmOtelListesi frmOtelListesi = new frmOtelListesi();
             frmOtelListesi.Show();
         }
-    }
+
+		private void label1_Click(object sender, EventArgs e)
+		{
+
+		}
+	}
 }

@@ -32,7 +32,13 @@ namespace WindowsFormsApp2
 
         public void btn_login_Click(object sender, EventArgs e)
         {
-            List<Yoneticiler> ynt = new List<Yoneticiler>();
+			if (string.IsNullOrWhiteSpace(txt_ad.Text) || string.IsNullOrWhiteSpace(txt_sifre.Text))
+			{
+				MessageBox.Show("Lütfen boş alan bırakmayınız!");
+				return; // İşlemi sonlandır
+			}
+
+			List<Yoneticiler> ynt = new List<Yoneticiler>();
             ynt = DataBase.Yoneticilers.Where(y => y.Ad == txt_ad.Text).ToList();
             string ad = txt_ad.Text;
             foreach (Yoneticiler y in ynt)

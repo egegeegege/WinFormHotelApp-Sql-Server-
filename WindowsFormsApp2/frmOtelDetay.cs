@@ -22,8 +22,6 @@ namespace WindowsFormsApp2
 
         ProjectContext db = new ProjectContext();
 
-
-
         public frmOtelDetay()
         {
             InitializeComponent();
@@ -61,58 +59,5 @@ namespace WindowsFormsApp2
             this.Hide();
         }
 
-        private void btn_rezerveEt_Click(object sender, EventArgs e)
-        {
-            Oteller otelvarmi = db.Otellers.Where(a => a.ID == id && a.Aktifmi == true).FirstOrDefault();
-            Oteller oteller = db.Otellers.Where(a => a.ID == id).FirstOrDefault();
-
-            if (otelvarmi != null)
-            {
-                MessageBox.Show("Seçtiğiniz otel odası şuan kiralık durumda");
-            }
-            else
-            {
-                Rezervasyon rezervasyon = new Rezervasyon()
-                {
-                    OdaID = id,
-                    YoneticiID = int.Parse(kid),
-                    RezerveTarihi = dtp_alısTarihi.Value,
-                    OdaTeslimTarihi = dtp_teslimTarihi.Value,
-                    KullanımSuresi = gun,
-                    FaturaTutari = Convert.ToDouble(lbl_faturatutar.Text),
-                    Aktifmi = false,
-                };
-
-                oteller.Aktifmi = true;
-                db.Rezervasyons.Add(rezervasyon);
-                db.SaveChanges();
-                MessageBox.Show("Otel odanız kiralandı");
-                this.Hide();
-            }
-        }
-
-        private void dtp_alısTarihi_ValueChanged(object sender, EventArgs e)
-        {
-            dtp_teslimTarihi.Enabled = true;
-        }
-
-        private void dtp_teslimTarihi_ValueChanged(object sender, EventArgs e)
-        {
-            TimeSpan GunFarki = dtp_teslimTarihi.Value.Subtract(dtp_alısTarihi.Value);
-            gun = GunFarki.Days;
-
-            if (gun < 1)
-            {
-                MessageBox.Show("Teslim Tarihi Alış Tarihinden önce ve aynı gün olamaz!");
-                lbl_gunsayisi.Text = null;
-                lbl_faturatutar.Text = null;
-            }
-            else
-            {
-                lbl_gunsayisi.Text = gun.ToString();
-                int faturatutari = gun * Convert.ToInt32(lbl_GünlükFiyatı.Text);
-                lbl_faturatutar.Text = faturatutari.ToString();
-            }
-        }
-    }
+	}
 }   

@@ -30,7 +30,7 @@ namespace WindowsFormsApp2
         
         void verigetir()
         {
-            baglanti = new SqlConnection("Server=.;Initial Catalog=ALog;Integrated Security=SSPI");
+            baglanti = new SqlConnection("Server=DESKTOP-L027AII\\SQLEXPRESS;Initial Catalog=ALog;Integrated Security=SSPI");
             baglanti.Open();
             da = new SqlDataAdapter("SELECT *FROM Otellers",baglanti);
             DataTable tablo = new DataTable();

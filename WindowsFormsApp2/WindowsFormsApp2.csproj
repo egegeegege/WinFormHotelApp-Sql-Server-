@@ -227,6 +227,12 @@
   <ItemGroup>
     <None Include="Resources\fdg.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Geek.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Geek-Photoroom.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
