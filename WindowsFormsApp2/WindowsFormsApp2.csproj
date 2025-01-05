@@ -121,9 +121,9 @@
     <Compile Include="frmYoneticiPanel.Designer.cs">
       <DependentUpon>frmYoneticiPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202407010835301_a.cs" />
-    <Compile Include="Migrations\202407010835301_a.Designer.cs">
-      <DependentUpon>202407010835301_a.cs</DependentUpon>
+    <Compile Include="Migrations\202501051802554_a.cs" />
+    <Compile Include="Migrations\202501051802554_a.Designer.cs">
+      <DependentUpon>202501051802554_a.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ORM\Context\ProjectContext.cs" />
@@ -151,8 +151,8 @@
     <EmbeddedResource Include="frmYoneticiPanel.resx">
       <DependentUpon>frmYoneticiPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202407010835301_a.resx">
-      <DependentUpon>202407010835301_a.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202501051802554_a.resx">
+      <DependentUpon>202501051802554_a.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
